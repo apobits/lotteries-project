@@ -1,0 +1,5 @@
+AUTODEPLOY_TARGET=
+EXTRACT_ARTIFACTS=false
+HOTDEPLOY_TARGET=D\:\\development\\wildfly-10.0.0.Final\\standalone\\deployments\\Lotteries\\LotteriesWeb
+WILDFLY_SUPPORT=false
+eclipse.preferences.version=1

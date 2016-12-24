@@ -1,0 +1,5 @@
+AUTODEPLOY_TARGET=D\:\\development\\wildfly-10.0.0.Final\\standalone\\deployments
+EXTRACT_ARTIFACTS=true
+HOTDEPLOY_TARGET=
+WILDFLY_SUPPORT=true
+eclipse.preferences.version=1
