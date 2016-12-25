@@ -94,7 +94,7 @@
 			<p:inputText value="#{lotteryMB.lotteryName}" id="lotteryName" required="true"
 				requiredMessage="Lottery name must not be empty" placeholder="Lottery name"
 				styleClass="form-control">
-				<f:validateLength maximum="2" />
+				<f:validateLength maximum="50" />
 				<f:ajax event="keyup" execute="lotteryName" ></f:ajax>
 			</p:inputText>
 			<p:message for="lotteryName" id="lotMessage" />

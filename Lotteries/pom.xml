@@ -11,7 +11,7 @@
 				<artifactId>maven-ear-plugin</artifactId>
 				<version>2.9</version>
 				<configuration>
-					<outputDirectory>D:\development\wildfly-10.0.0.Final\standalone\deployments</outputDirectory>
+					<outputDirectory>C:\apo\development\wildfly-10.1.0.Final\standalone\deployments</outputDirectory>
 					<!-- <outputDirectory>C:/Oracle/Middleware/Oracle_Home/user_projects/domains/JavaEE/autodeploy</outputDirectory> -->
 					<finalName>Lotteries</finalName>
 					<unpackTypes>war,rar</unpackTypes>

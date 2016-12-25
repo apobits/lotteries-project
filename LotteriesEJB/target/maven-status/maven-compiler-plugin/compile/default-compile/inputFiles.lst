@@ -1,8 +1,8 @@
-D:\development\workspaceJEE\LotteriesEJB\ejbModule\ortiz\perez\albin\dtos\ResultDTO.java
-D:\development\workspaceJEE\LotteriesEJB\ejbModule\ortiz\perez\albin\entities\Result.java
-D:\development\workspaceJEE\LotteriesEJB\ejbModule\ortiz\perez\albin\beans\stateless\LotteryBean.java
-D:\development\workspaceJEE\LotteriesEJB\ejbModule\ortiz\perez\albin\interceptor\Interceptor1.java
-D:\development\workspaceJEE\LotteriesEJB\ejbModule\ortiz\perez\albin\beans\stateless\ResultBean.java
-D:\development\workspaceJEE\LotteriesEJB\ejbModule\ortiz\perez\albin\entities\ResultPK.java
-D:\development\workspaceJEE\LotteriesEJB\ejbModule\ortiz\perez\albin\dtos\ResultFieldsDTO.java
-D:\development\workspaceJEE\LotteriesEJB\ejbModule\ortiz\perez\albin\entities\Lottery.java
+C:\apo\development\workspace\lotteries-project\LotteriesEJB\ejbModule\ortiz\perez\albin\entities\Lottery.java
+C:\apo\development\workspace\lotteries-project\LotteriesEJB\ejbModule\ortiz\perez\albin\dtos\ResultDTO.java
+C:\apo\development\workspace\lotteries-project\LotteriesEJB\ejbModule\ortiz\perez\albin\entities\Result.java
+C:\apo\development\workspace\lotteries-project\LotteriesEJB\ejbModule\ortiz\perez\albin\entities\ResultPK.java
+C:\apo\development\workspace\lotteries-project\LotteriesEJB\ejbModule\ortiz\perez\albin\beans\stateless\ResultBean.java
+C:\apo\development\workspace\lotteries-project\LotteriesEJB\ejbModule\ortiz\perez\albin\dtos\ResultFieldsDTO.java
+C:\apo\development\workspace\lotteries-project\LotteriesEJB\ejbModule\ortiz\perez\albin\interceptor\Interceptor1.java
+C:\apo\development\workspace\lotteries-project\LotteriesEJB\ejbModule\ortiz\perez\albin\beans\stateless\LotteryBean.java
