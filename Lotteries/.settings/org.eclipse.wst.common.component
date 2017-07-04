@@ -2,7 +2,7 @@
     <wb-module deploy-name="Lotteries">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
         <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
-        <dependent-module archiveName="LotteriesEJB.jar" deploy-path="/" handle="module:/resource/LotteriesEJB/LotteriesEJB">
+        <dependent-module archiveName="LotteriesEJB.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/lotteries-project/LotteriesEJB/target/classes">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="LotteriesWeb.war" deploy-path="/" handle="module:/resource/LotteriesWeb/LotteriesWeb">

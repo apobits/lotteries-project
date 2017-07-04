@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.EJB;
+import javax.enterprise.context.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
 
 import ortiz.perez.albin.beans.stateless.ResultBean;
 import ortiz.perez.albin.dtos.ResultDTO;
@@ -20,141 +20,148 @@ import ortiz.perez.albin.entities.Result;
  * 
  */
 @ManagedBean
-@ViewScoped
+@ApplicationScoped
 public class StatisticalMB implements Serializable {
 
-    /**
-     * 
-     */
-    private static final long serialVersionUID = 1L;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
-    @EJB
-    ResultBean resultBean;
+	@EJB
+	ResultBean resultBean;
 
-    private String lotteryName;
+	private String lotteryName;
 
-    private List<ResultDTO> numberRepetition;
+	private List<ResultDTO> numberRepetition;
 
-    private List<ResultDTO> numberFrequencyRepetition;
+	private List<ResultDTO> numberFrequencyRepetition;
 
-    private List<Result> results = new ArrayList<Result>();
+	private List<Result> results = new ArrayList<Result>();
 
-    private Integer page;
+	private Integer page;
 
-    private List<String> numbersToPlay;
+	private List<ResultDTO> numbersToPlay;
 
-    public void obtainNumbersRepetition() {
-	numberRepetition = resultBean.obtainCountNumbersRepetition(lotteryName);
-	// RequestContext rc = RequestContext.getCurrentInstance();
-	// rc.update("reps:table");
-	// numberFrequencyRepetition = resultBean
-	// .obtainFrequencytRepetitionNumbers(lotteryName);
-    }
+	public StatisticalMB() {
+	}
 
-    public void obtainFrequencyNumbersRepetition() {
-	numberFrequencyRepetition = resultBean.obtainFrequencyNumbersRepetition(lotteryName);
-    }
+	public void obtainNumbersRepetition() {
+		numberRepetition = resultBean.obtainCountNumbersRepetition(lotteryName);
+		// RequestContext rc = RequestContext.getCurrentInstance();
+		// rc.update("reps:table");
+		// numberFrequencyRepetition = resultBean
+		// .obtainFrequencytRepetitionNumbers(lotteryName);
+	}
 
-    /**
-     * @return the numberRepetition
-     */
-    public List<ResultDTO> getNumberRepetition() {
-	return numberRepetition;
-    }
+	public void obtainFrequencyNumbersRepetition() {
+		numberFrequencyRepetition = resultBean.obtainFrequencyNumbersRepetition(lotteryName);
+	}
 
-    /**
-     * @param numberRepetition
-     *            the numberRepetition to set
-     */
-    public void setNumberRepetition(List<ResultDTO> numberRepetition) {
-	this.numberRepetition = numberRepetition;
-    }
+	/**
+	 * @return the numberRepetition
+	 */
+	public List<ResultDTO> getNumberRepetition() {
+		return numberRepetition;
+	}
 
-    /**
-     * @return the results
-     */
-    public List<Result> getResults() {
-	return results;
-    }
+	/**
+	 * @param numberRepetition
+	 *            the numberRepetition to set
+	 */
+	public void setNumberRepetition(List<ResultDTO> numberRepetition) {
+		this.numberRepetition = numberRepetition;
+	}
 
-    /**
-     * @param results
-     *            the results to set
-     */
-    public void setResults(List<Result> results) {
-	this.results = results;
-    }
+	/**
+	 * @return the results
+	 */
+	public List<Result> getResults() {
+		return results;
+	}
 
-    public void getResultsList() {
-	results = resultBean.getResultsList(lotteryName);
-    }
+	/**
+	 * @param results
+	 *            the results to set
+	 */
+	public void setResults(List<Result> results) {
+		this.results = results;
+	}
 
-    /**
-     * @return the lotteryName
-     */
-    public String getLotteryName() {
-	return lotteryName;
-    }
+	public void getResultsList() {
+		results = resultBean.getResultsList(lotteryName);
+	}
 
-    /**
-     * @param lotteryName
-     *            the lotteryName to set
-     */
-    public void setLotteryName(String lotteryName) {
-	this.lotteryName = lotteryName;
-    }
+	/**
+	 * @return the lotteryName
+	 */
+	public String getLotteryName() {
+		return lotteryName;
+	}
 
-    /**
-     * @return the page
-     */
-    public Integer getPage() {
-	return page;
-    }
+	/**
+	 * @param lotteryName
+	 *            the lotteryName to set
+	 */
+	public void setLotteryName(String lotteryName) {
+		this.lotteryName = lotteryName;
+	}
 
-    /**
-     * @param page
-     *            the page to set
-     */
-    public void setPage(Integer page) {
-	this.page = page;
-    }
+	/**
+	 * @return the page
+	 */
+	public Integer getPage() {
+		return page;
+	}
 
-    /**
-     * @return the numberFrequencyRepetition
-     */
-    public List<ResultDTO> getNumberFrequencyRepetition() {
-	return numberFrequencyRepetition;
-    }
+	/**
+	 * @param page
+	 *            the page to set
+	 */
+	public void setPage(Integer page) {
+		this.page = page;
+	}
 
-    /**
-     * @param numberFrequencyRepetition
-     *            the numberFrequencyRepetition to set
-     */
-    public void setNumberFrequencyRepetition(List<ResultDTO> numberFrequencyRepetition) {
-	this.numberFrequencyRepetition = numberFrequencyRepetition;
-    }
+	/**
+	 * @return the numberFrequencyRepetition
+	 */
+	public List<ResultDTO> getNumberFrequencyRepetition() {
+		return numberFrequencyRepetition;
+	}
 
-    // public void obtainNumbersToPlay() {
-    // numbersToPlay = resultBean.getNumbersToPlay(lotteryName);
-    // }
+	/**
+	 * @param numberFrequencyRepetition
+	 *            the numberFrequencyRepetition to set
+	 */
+	public void setNumberFrequencyRepetition(List<ResultDTO> numberFrequencyRepetition) {
+		this.numberFrequencyRepetition = numberFrequencyRepetition;
+	}
 
-    /**
-     * @return the numbersToPlay
-     */
-    public List<String> getNumbersToPlay() {
-	return numbersToPlay;
-    }
+	// public void obtainNumbersToPlay() {
+	// numbersToPlay = resultBean.getNumbersToPlay(lotteryName);
+	// }
 
-    /**
-     * @param numbersToPlay
-     *            the numbersToPlay to set
-     */
-    public void setNumbersToPlay(List<String> numbersToPlay) {
-	this.numbersToPlay = numbersToPlay;
-    }
+	/**
+	 * @return the numbersToPlay
+	 */
+	public List<ResultDTO> getNumbersToPlay() {
+		return numbersToPlay;
+	}
 
-    public ResultDTO getResultDTO() {
-	return resultBean.getNumbersRepetition(resultBean.getResultsList(lotteryName));
-    }
+	/**
+	 * @param numbersToPlay
+	 *            the numbersToPlay to set
+	 */
+	public void setNumbersToPlay(List<ResultDTO> numbersToPlay) {
+		this.numbersToPlay = numbersToPlay;
+	}
+
+	public ResultDTO getResultDTO() {
+		return resultBean.getNumbersRepetition(resultBean.getResultsList(lotteryName));
+	}
+
+	public void processNumbersToPlay() {
+		numbersToPlay = resultBean.getNumbersDelayed(lotteryName);
+	}
 
 }

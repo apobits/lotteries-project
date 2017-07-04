@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Lottery</title>
+	<meta name="viewport" content="width = device-width, initial-scale = 1" />
+	<h:outputStylesheet name="/webjars/bootstrap/3.3.6/css/bootstrap.css" />
+	<h:outputStylesheet name="css/MyStyle.css" />
+	<h:outputScript name="/webjars/bootstrap/3.3.6/js/bootstrap.min.js" />
+	<h:outputStylesheet
+		name="/webjars/bootstrap/3.3.6/fonts/glyphicons-halflings-regular.eot"></h:outputStylesheet>
+	<h:outputStylesheet
+		name="/webjars/bootstrap/3.3.6/fonts/glyphicons-halflings-regular.svg"></h:outputStylesheet>
+	<h:outputStylesheet
+		name="/webjars/bootstrap/3.3.6/fonts/glyphicons-halflings-regular.ttf"></h:outputStylesheet>
+	<h:outputStylesheet
+		name="/webjars/bootstrap/3.3.6/fonts/glyphicons-halflings-regular.woff"></h:outputStylesheet>
+	<h:outputStylesheet
+		name="/webjars/bootstrap/3.3.6/fonts/glyphicons-halflings-regular.woff2"></h:outputStylesheet>
+
+
+	<style type="text/css">
+.danna {
+	background-image:
+		url(#{request.contextPath}/resources/images/Family2.jpg);
+	height: 500px;
+	background-position: center;
+	background-size: cover;
+}
+
+.love {
+	background-image:
+		url(#{request.contextPath}/resources/images/Family1.jpg);
+	height: 500px;
+	background-position: center;
+	background-size: cover;
+}
+
+.family {
+	background-image:
+		url(#{request.contextPath}/resources/images/Family.jpg);
+	height: 500px;
+	background-position: center;
+	background-size: cover;
+}
+</style>
+</h:head>
+
+<h:body>
+	<span class="glyphicon glyphicon-star-empty"></span>
+	<h:form>
+	<h:inputText value="#{home.test}" />
+		<p:commandButton value="Lotteries" action="#{home.manageLotteries()}" />
+	</h:form>
+</h:body>
+</html>

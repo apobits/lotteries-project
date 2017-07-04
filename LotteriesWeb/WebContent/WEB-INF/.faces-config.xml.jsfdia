@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#Home.xhtml" PATH="/Home.xhtml"
+  SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#Home.xhtml:0" NAME="item" PATH="/Home.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="LotteryCRUD::#Lottery.xhtml" NAME="output"
+    PATH="/Lottery.xhtml" TARGET="rules:#Lottery.xhtml"
+    TITLE="LotteryCRUD" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#Lottery.xhtml" PATH="/Lottery.xhtml"
+  SHAPE="240,33,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>
