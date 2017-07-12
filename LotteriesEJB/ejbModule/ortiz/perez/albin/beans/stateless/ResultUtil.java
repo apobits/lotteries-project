@@ -34,7 +34,11 @@ public class ResultUtil {
 		int count[] = new int[10];
 		int i = 0;
 		results.forEach(t -> {
-
+			if (t.getDrawNumber().charAt(3) == '3') {
+				frequency.add(count[2]);
+				count[2] = -1;
+			}
+			incrementOne(count);
 		});
 		return null;
 	}

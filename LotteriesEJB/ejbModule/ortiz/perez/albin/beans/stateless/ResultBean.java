@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
+import javax.ejb.EJB;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -23,6 +24,9 @@ public class ResultBean {
 
 	@PersistenceContext(unitName = "LotteriesEJB")
 	private EntityManager entityManager;
+
+	@EJB
+	private ResultUtil resultUtil;
 
 	private int[] firstDigit;
 	private int[] secondDigit;
@@ -578,6 +582,7 @@ public class ResultBean {
 
 	@SuppressWarnings("unchecked")
 	public List<Result> getResultsList(String lotteryName) {
+
 		return entityManager.createQuery(
 				"SELECT R FROM RESULT R where R.id.lotteryName ='" + lotteryName + "' order by R.id.drawDate desc")
 				.getResultList();
@@ -644,6 +649,8 @@ public class ResultBean {
 	}
 
 	public List<ResultDTO> getNumbersDelayed(String lotteryName) {
+
+		resultUtil.getFrequencyRepetition();
 		ResultDTO numbersDelayedFirstDigit = new ResultDTO();
 		ResultDTO numbersDelayedSecondDigit = new ResultDTO();
 		ResultDTO numbersDelayedThirdDigit = new ResultDTO();
